@@ -1,0 +1,36 @@
+Instalar as bibliotecas flask e bcrypt
+
+"pip install flask"
+"pip install bcrypt"
+
+Precisará usar o SQLite para visualizar o banco de dados, pode ser o online ou se tiver instalado
+
+https://sqliteonline.com/
+
+executar o programa API.py e enviar requisições post para o endereço http://localhost:5000/users passando o login e senha nos campos "login" e "password" respectivamente
+
+Exemplo: 
+{
+    "login": "João",
+    "password": "SenhaSegura"
+}
+
+Resposta:
+{
+    "message": "Usuário criado com sucesso."
+}
+
+depois, no SQLite rode um select na tabela "users" para verificar as informações de login
+
+para testar a parte do login, pode enviar uma requisição POST para o endereço http://localhost:5000/login, com o mesmo formato da criação de usuários, passando o login e a senha
+
+Exemplo: 
+{
+    "login": "João",
+    "password": "SenhaSegura"
+}
+
+Resposta:
+{
+    "message": "Login bem-sucedido."
+}
